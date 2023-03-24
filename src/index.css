@@ -10,10 +10,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-:root, :host {
-  --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Solid";
-  --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Regular";
-  --fa-font-light: normal 300 1em/1 "Font Awesome 6 Light";
-  --fa-font-thin: normal 100 1em/1 "Font Awesome 6 Thin";
-  --fa-font-duotone: normal 900 1em/1 "Font Awesome 6 Duotone";
-  --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands"; }

@@ -1,29 +1,11 @@
-# esbuild React Typescript Template
+# bug in esbuild minification 
 
-> This is a Typecript template for [esbuild create react app](https://github.com/awran5/esbuild-create-react-app) project.
+There seems to be a bug in esbuild minification in certain scenarios when replacing the "\n" character with a line break. 
 
-## What is inside?
+## Steps to reproduce
 
-- [TypeScript](https://www.typescriptlang.org/)
-- [esbuild](https://esbuild.github.io/)
-- [Eslint](https://eslint.org/)
-- [Prettier](https://prettier.io/)
-- [Husky](https://github.com/typicode/husky)
-- [lint-staged](https://github.com/okonet/lint-staged)
-- [live-server](https://github.com/tapio/live-server)
+1. Run `npm run build` 
+2. Open `/build/index.js` 
+3. Look for `:root, :host` inside the file and see the rest of the text is not minified
 
-## Update (01-11-2022)
-
-- add: css module support [esbuild-css-modules-plugin](https://www.npmjs.com/package/esbuild-css-modules-plugin)
-- add: sass/scss [esbuild-sass-plugin](https://www.npmjs.com/package/esbuild-sass-plugin)
-- add: [PostCSS](https://github.com/postcss/postcss)
-- add: [postcss-preset-env](https://github.com/csstools/postcss-plugins/tree/main/plugin-packs/postcss-preset-env)
-- add: [autoprefixer](https://github.com/postcss/autoprefixer)
-- build: update React 18
-- build: update dependencies
-- refactor: rename `dist` folder to `build`
-- refactor: switch to npm instead of yarn
-
-### License
-
-MIT © [awran5](https://github.com/awran5/)
+![alt text](./public/bug-esbuild.png "Bug in esbuild minification")
